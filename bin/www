@@ -11,8 +11,7 @@ var debug = require('debug')('SocketExpress:server'),
     address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
     server = http.Server(app);
 var PeerServer = require('peer').PeerServer;
-var RtcServer = PeerServer({port: 9000, path: '/peerjs'});
-
+var RtcServer = PeerServer({ port: 9000, host: process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1', path: '/peerjs'});
 /**
  * Setting the Port.
  */
