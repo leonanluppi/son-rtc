@@ -87,11 +87,15 @@
 
     app.init = function init() {
         app.peer = new Peer({
-            host: 'sonrtc-leonanllp.rhcloud.com',
-            port: 8000,
-            path: '/peerjs',
-            debug: 3
+            key: 'xmj30v615pfd2t9'
         });
+
+        // app.peer = new Peer({
+        //     host: 'sonrtc-leonanllp.rhcloud.com',
+        //     port: 8000,
+        //     path: '/peerjs',
+        //     debug: 3
+        // });
 
         app.peer.on('open', app.events.newPeer);
         app.peer.on('connection', app.events.peerConnect);
