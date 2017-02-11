@@ -87,8 +87,8 @@
 
     app.init = function init() {
         app.peer = new Peer({
-            host: 'localhost',
-            port: 9000,
+            host: 'sonrtc-leonanllp.rhcloud.com',
+            port: 8000,
             path: '/peerjs',
             debug: 3
         });
