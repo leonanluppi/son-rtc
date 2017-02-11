@@ -1,0 +1,29 @@
+html, body {
+    height: 100%;
+}
+
+.header .brand-logo {
+    padding-left: 20px;
+    font-weight: 100;
+}
+
+.main {
+    margin-top: 20px;
+    height: 100%;
+}
+.main > div {
+    height: 100%;
+}
+
+.login-container {
+    margin-top: 20px;
+}
+
+
+.textarea-100 {
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+  display: none;
+}

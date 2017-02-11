@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title><?= title ?></title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+		<link rel='stylesheet' href='/stylesheets/style.css' />
+	</head>
+	<body>
+		<nav class="header">
+			<div class="nav-wrapper">
+				<a class="brand-logo center">
+					RTC ID:
+					<span id="id"></span>
+				</a>
+		  		<ul id="nav-mobile" class="right hide-on-med-and-down">
+		  		</ul>
+			</div>
+		</nav>
+
+		<main class="row login-container">
+			<!-- Display video of the current user -->
+			<div class="col s3">
+				<div id="my-camera" class="video-container">
+					<video width="300" height="200" controls autoplay></video>
+				</div>
+			</div>
+
+			<form class="col s12">
+				<div class="row">
+					<div class="input-field col s12">
+						<input type="text" placeholder="Enter your username" name="username" id="username" class="validate">
+						<label for="username">Username</label>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field pattern_peer_id_connected col s12">
+						<input type="text" placeholder="Enter pattern id" name="peer_id" id="peer_id" class="validate">
+						<label for="peer_id">Connect to:</label>
+					</div>
+					<div class="input-field show_connected_patterncol s12">
+						<span id="text_connected_peer" class="hidden">Connected pattern: </span>
+						<span id="connected_peer"></span>
+					</div>
+				</div>
+				<div class="row">
+					<div class="input-field col s12">
+						<button type="button" class="waves-effect waves-light btn" id="login">Connect</button>
+					</div>
+				</div>
+			</form>
+		</main>
+
+		<main class="row main hidden">
+			<div class="col s9">
+				<!-- <div class="textarea-100" id="editor"></div> -->
+				<textarea class="textarea-100" name="editor" id="editor"></textarea>
+			</div>
+			<div class="col s3">
+				<div id="pattern-camera" class="camera">
+					<video width="300" height="200" autoplay></video>
+				</div>
+            	<button type="button" class="waves-effect waves-light btn" id="call">Call</button>
+			</div>
+		</main>
+	</body>
+	<script src="node_modules/jquery/dist/jquery.min.js"></script>
+	<script src="node_modules/peerjs/dist/peer.min.js"></script>
+	<script src="node_modules/socket.io-client/dist/socket.io.min.js"></script>
+	<script src="node_modules/ace/build/src/ace.js"></script>
+	<script src="node_modules/ace/build/src/mode-javascript.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
+	<script src="/javascripts/app.js"></script>
+	<script>
+		// var editor = ace.edit("editor");
+	 //    var JavaScriptMode = ace.require("ace/mode/javascript").Mode;
+	 //    editor.session.setMode(new JavaScriptMode());
+	</script>
+</html>
